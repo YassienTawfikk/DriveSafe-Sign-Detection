@@ -3,7 +3,7 @@ import kagglehub
 import shutil
 
 
-def download_dataset(dest_folder=Path("data/raw")):
+def download_dataset(dest_folder=Path("data")):
     # Skip download if data already exists
     if dest_folder.exists() and any(dest_folder.iterdir()):
         print(f"Dataset already exists in {dest_folder}, skipping download.")

@@ -5,7 +5,7 @@ base_dir = Path(__file__).resolve().parents[1]
 
 # Target directories to create
 paths = [
-    base_dir / "data" / "raw",
+    base_dir / "data",
 ]
 
 for path in paths:
