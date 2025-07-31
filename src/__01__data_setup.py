@@ -1,9 +1,12 @@
+import numpy as np
+
 from src.__00__paths import data_dir, figures_dir
 from pathlib import Path
 import kagglehub
 import shutil
 import pandas as pd
 import matplotlib.pyplot as plt
+from PIL import Image
 
 
 def download_dataset(dest_folder=data_dir):
@@ -53,3 +56,19 @@ def save_class_distribution(csv_path=data_dir / "Train.csv", output_dir=figures_
     plt.savefig(save_path, dpi=300, bbox_inches='tight')
     print(f"✅ Class distribution plot saved to: {save_path}")
     plt.close()
+
+
+def load_preprocessed_data(df_title):
+    csv_path = data_dir / df_title
+    data_df = pd.read_csv(csv_path)
+    data, labels = [], []
+    for _, row in data_df.iterrows():
+        image_path = data_dir / data_df['Path']
+        try:
+            image = Image.open(image_path)
+            image = image.resize((30, 30))
+            data.append(np.array(image))
+            labels.append(row['ClassId'])
+        except Exception as e:
+            print(f"X - Corrupted Image at {'/'.join(image_path.parts[-3:])}")
+    return np.array(data), np.array(labels)
