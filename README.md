@@ -8,7 +8,7 @@
 
 **DriveSafe-Sign-Detection** is a deep learning-based traffic sign classification system built on a custom Convolutional Neural Network (CNN). The system mimics the perception component of Advanced Driver-Assistance Systems (ADAS), accurately detecting and classifying 43 types of German traffic signs from real-world images.
 
-This project was trained and evaluated on the [GTSRB dataset](https://benchmark.ini.rub.de/gtsrb_news.html) with high performance and well-documented outputs.
+This project was trained and evaluated on the [GTSRB dataset](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign) with high performance and well-documented outputs.
 
 ---
 
