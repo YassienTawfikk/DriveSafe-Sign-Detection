@@ -1,6 +1,6 @@
 import pandas as pd
 from pathlib import Path
-from src.data_setup import download_dataset, save_class_distribution
+from src.__01__data_setup import download_dataset, save_class_distribution
 
 
 def main():

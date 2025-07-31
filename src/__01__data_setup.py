@@ -1,4 +1,4 @@
-from src.paths import data_dir, figures_dir
+from src.__00__paths import data_dir, figures_dir
 from pathlib import Path
 import kagglehub
 import shutil
