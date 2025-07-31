@@ -1,0 +1,99 @@
+DriveSafe-Sign-Detection/
+│
+├── data/
+│   ├── Meta/
+│   │   ├── .~lock.ClassesInformation.ods#
+│   │   ├── .~lock.ClassesInformationStrong.ods#
+│   │   ├── 0.png
+│   │   ├── 1.png
+│   │   ├── ...
+│   │   └── 42.png
+│   │
+│   ├── Test/
+│   │   ├── 00000.png
+│   │   ├── 00001.png
+│   │   ├── 00002.png
+│   │   ├── ...
+│   │   └── 12629.png
+│   │
+│   ├── Train/
+│   │   │
+│   │   ├── 0/
+│   │   │    ├── 00000_00000_00000.png
+│   │   │    ├── 00000_00000_00001.png
+│   │   │    ├── 00000_00000_00002.png
+│   │   │    ├── ...
+│   │   │    ├── 00000_00000_00029.png
+│   │   │    ├── 00000_00001_00000.png
+│   │   │    ├── 00000_00001_00001.png
+│   │   │    ├── ...
+│   │   │    ├── 00000_00001_00029.png
+│   │   │    ├── 00000_00002_00000.png
+│   │   │    ├── ...
+│   │   │    └── 00000_00006_00029.png
+│   │   ├── 1/
+│   │   │
+│   │   ├── 2/
+│   │   │    ├── 00002_00000_00000.png
+│   │   │    ├── 00002_00000_00001.png
+│   │   │    ├── 00002_00000_00002.png
+│   │   │    ├── ...
+│   │   │    ├── 00002_00000_00029.png
+│   │   │    ├── 00002_00001_00000.png
+│   │   │    ├── 00002_00001_00001.png
+│   │   │    ├── ...
+│   │   │    ├── 00002_00001_00029.png
+│   │   │    ├── 00002_00002_00000.png
+│   │   │    ├── ...
+│   │   │    └── 00002_00006_00029.png
+│   │   │
+│   │   ├── .../
+│   │   │
+│   │   └── 42/
+│   │        ├── 00042_00000_00000.png
+│   │        ├── 00042_00000_00001.png
+│   │        ├── 00042_00000_00002.png
+│   │        ├── ...
+│   │        ├── 00042_00000_00029.png
+│   │        ├── 00042_00001_00000.png
+│   │        ├── 00042_00001_00001.png
+│   │        ├── ...
+│   │        ├── 00042_00001_00029.png
+│   │        ├── 00042_00002_00000.png
+│   │        ├── ...
+│   │        └── 00042_00006_00029.png
+│   │
+│   ├── Meta.csv
+│   ├── Train.csv
+│   └── Test.csv
+│
+├── notebooks/
+│   ├── 00_init.ipynb                       # Initialization of Directories
+│   ├── 01_data_exploration.ipynb           # Visualize & inspect raw GTSRB data
+│   ├── 02_custom_CNN_training.ipynb        # Build and train custom CNN
+│   ├── 03_mobilenet_comparison.ipynb       # Load MobileNet and evaluate
+│   └── 04_visualize_results.ipynb          # Confusion matrix & performance plots
+│
+├── src/                                    # Python scripts for modular implementation
+│   ├── __init__.py                         # Initialization method Called in Main
+│   ├── __00__paths.py                      # Global variable for paths to use
+│   ├── __01__data_setup.py                 # Downloading, Preprocess Datasets
+│   ├── __02__CNN_model_training.py         # Train, validate Dataset and Model Performing
+│   └── __03__CNN_model_evaluation.py       # Model Evaluation (Confusion Matrix - Precision)
+│
+├── outputs/                             # Python scripts for modular implementation
+│   ├── model/
+│   │   └── custom_traffic_classifier.h5
+│   │
+│   ├── figures/
+│   │   ├── class_distribution.png
+│   │   ├── training_performance.png
+│   │   └── confusion_matrix.png
+│   │
+│   └── docs/
+│       └── classification_report.txt
+│
+├── main.py                          # Optional: CLI or orchestrator for full training/eval
+├── README.md                        # Full description, instructions, results
+├── requirements.txt                 # Python dependencies
+└── .gitignore
