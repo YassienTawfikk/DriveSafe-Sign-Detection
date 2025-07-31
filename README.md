@@ -1,9 +1,9 @@
 # DriveSafe-Sign-Detection
-
-> **Poster Placeholder:** Add your main project visual poster here – e.g., a diagram of the pipeline or a high-level model output.
+<p align='center'>
+<img width="800" alt="20250731_1333_Advanced Driver Assistance Scene_remix_01k1g0kerqe6h84j93hvqxtvn4" src="https://github.com/user-attachments/assets/ef4f2337-90ef-4301-b7ae-c8a02d1f2d5d" />
+</p>
 
 ---
-
 ## Overview
 
 **DriveSafe-Sign-Detection** is a deep learning-based traffic sign classification system built on a custom Convolutional Neural Network (CNN). The system mimics the perception component of Advanced Driver-Assistance Systems (ADAS), accurately detecting and classifying 43 types of German traffic signs from real-world images.
