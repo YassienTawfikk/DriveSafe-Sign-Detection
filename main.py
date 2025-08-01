@@ -5,6 +5,10 @@ from src.__02__CNN_model_training import *
 from src.__03__CNN_model_evaluation import save_report_confusion_matrix
 
 
+# ============================================================================
+# MobileNet Classifier Model is in Notebook `04_MobileNetV2_classifier.ipynb`
+# ============================================================================
+
 def main():
     # Step 1: Prepare data
     print("🔽 Downloading GTSRB from KaggleHub...")
