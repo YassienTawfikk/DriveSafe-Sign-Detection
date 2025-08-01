@@ -1,5 +1,8 @@
 DriveSafe-Sign-Detection/
 │
+├── documents/
+│   └── project_structure.txt
+│
 ├── data/
 │   ├── Meta/
 │   │   ├── .~lock.ClassesInformation.ods#
