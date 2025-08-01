@@ -24,7 +24,7 @@ def main():
 
     print("🔽 Performing Training (8~10 Minutes)...")
     history = model.fit(x_train, y_train, batch_size=128, epochs=35, validation_data=(x_val, y_val))
-    model.save('outputs' / 'model' / 'custom_traffic_classifier.h5')
+    model.save('outputs' / 'model' / 'custom_CNN_traffic_classifier.h5')
 
     print("🔽 Save Training Performance...")
     save_training_performance(history=history)

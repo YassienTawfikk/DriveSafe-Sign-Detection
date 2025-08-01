@@ -11,7 +11,7 @@ def save_report_confusion_matrix(y_test, y_pred):
     cm = confusion_matrix(y_test, y_pred)
 
     # 2. Save classification report to file
-    report_path = docs_dir / "classification_report.txt"
+    report_path = docs_dir / "custom_CNN_classification_report.txt"
     with open(report_path, "w") as f:
         f.write(f"Test Accuracy: {accuracy:.2f}%\n\n")
         f.write("Classification Report:\n")
@@ -24,5 +24,5 @@ def save_report_confusion_matrix(y_test, y_pred):
     plt.xlabel("Predicted")
     plt.ylabel("Actual")
     plt.tight_layout()
-    plt.savefig(figures_dir / "confusion_matrix.png", dpi=300)
+    plt.savefig(figures_dir / "custom_CNN_confusion_matrix.png", dpi=300)
     plt.show()
