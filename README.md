@@ -6,7 +6,7 @@
 ---
 ## Overview
 
-**DriveSafe-Sign-Detection** is a deep learning-based traffic sign classification system built on a custom Convolutional Neural Network (CNN). The system mimics the perception component of Advanced Driver-Assistance Systems (ADAS), accurately detecting and classifying 43 types of German traffic signs from real-world images.
+**DriveSafe-Sign-Detection** is a deep learning-based traffic sign classification system built on a custom Convolutional Neural Network (CNN) and MobileNetwork V2 Pretrained Model. The system mimics the perception component of Advanced Driver-Assistance Systems (ADAS), accurately detecting and classifying 43 types of German traffic signs from real-world images.
 
 This project was trained and evaluated on the [GTSRB dataset](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign) with high performance and well-documented outputs.
 
@@ -157,6 +157,49 @@ Visual representation of model performance across all 43 classes:
 Diagonal dominance indicates high accuracy, with minimal off-diagonal misclassifications.
 
 ---
+
+## Model Comparison: CNN vs. MobileNetV2
+
+This section presents a comparative analysis between the custom CNN classifier and a MobileNetV2-based model.
+
+### Macro-Averaged Evaluation Metrics
+
+| Metric          | CNN    | MobileNetV2 |
+| --------------- | ------ | ----------- |
+| Accuracy        | 96.2%  | 58.9%       |
+| Macro Precision | 0.9498 | 0.5433      |
+| Macro Recall    | 0.9440 | 0.4793      |
+| Macro F1-Score  | 0.9430 | 0.4816      |
+
+---
+
+### Visual Comparison
+
+**Location:** `outputs/figures/comparison_CNN_MobileNet.png`
+
+
+<p align="center">
+<img width="800" alt="comparison_CNN_MobileNet" src="https://github.com/user-attachments/assets/68b155e9-8114-47bf-a92f-cad613611392" />
+</p>
+
+This visual illustrates the performance gap between the two models using macro-averaged metrics.
+
+---
+
+### Why MobileNetV2 Achieved Lower Performance
+
+The MobileNetV2 model was used solely as a **frozen feature extractor**. Its convolutional base (pre-trained on ImageNet) remained unmodified during training. Only a custom classification head was trained on top. This design choice led to:
+
+* Limited adaptation to traffic sign characteristics
+* Dependence on generic features not tailored to the GTSRB dataset
+* A significant performance drop compared to the CNN trained from scratch
+
+This setup was intentional, serving as a baseline for comparison. A fine-tuned or fully-trainable MobileNetV2 could yield better results, but would require more compute and longer training time.
+
+---
+
+Place this section in the README right after individual model evaluations and before the project structure or conclusion.
+This was done intentionally for baseline comparison purposes. In contrast, the custom CNN was trained end-to-end on the GTSRB dataset, allowing it to learn task-specific features more effectively.
 
 ## Getting Started
 
