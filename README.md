@@ -1,6 +1,6 @@
 # DriveSafe-Sign-Detection
 <p align='center'>
-<img width="800" alt="20250731_1333_Advanced Driver Assistance Scene_remix_01k1g0kerqe6h84j93hvqxtvn4" src="https://github.com/user-attachments/assets/ef4f2337-90ef-4301-b7ae-c8a02d1f2d5d" />
+<img width="800" alt="DriveSafe Traffic Detection" src="https://github.com/user-attachments/assets/252feffe-5f2e-4be9-8cc6-0b14b2d49e19" />
 </p>
 
 ---
